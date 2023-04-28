@@ -8,7 +8,7 @@ function enviarWhatsapp() {
 	var mensajeWhatsapp = "Hola, mi nombre es " + nombre + " y mi número de teléfono es " + telefono + ". " + mensaje;
 
 	// Abrir la aplicación de WhatsApp con el mensaje predefinido
-	window.open("https://api.whatsapp.com/send?phone=5491125472001&text=" + encodeURIComponent(mensajeWhatsapp));
+	window.open("https://api.whatsapp.com/send?phone=+5491125472001&text=" + encodeURIComponent(mensajeWhatsapp));
 }
 
 function enviarCorreo() {
