@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-  $to = "tu-correo@ejemplo.com";
+  $to = "brunocherubinoo01@gmail.com";
   $subject = "Nuevo mensaje de " . $_POST['nombre'];
   $message = "Nombre: " . $_POST['nombre'] . "\n" .
              "Correo electrónico: " . $_POST['correo'] . "\n" .
