@@ -2,27 +2,27 @@
 <html>
 <head>
 	<title>Formulario de contacto</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="enviar.js"></script>
 </head>
 <body>
 	<h1>Formulario de contacto</h1>
+	<p>Por favor, complete el siguiente formulario para contactarnos.</p>
 	<form>
-	  <label for="nombre">Nombre:</label>
-	  <input type="text" id="nombre" name="nombre" required>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre"><br>
 
-	  <label for="correo">Correo electrónico:</label>
-	  <input type="email" id="correo" name="correo" required>
+		<label for="correo">Correo electrónico:</label>
+		<input type="email" id="correo" name="correo"><br>
 
-	  <label for="telefono">Teléfono:</label>
-	  <input type="tel" id="telefono" name="telefono">
+		<label for="telefono">Teléfono:</label>
+		<input type="tel" id="telefono" name="telefono"><br>
 
-	  <label for="mensaje">Mensaje:</label>
-	  <textarea id="mensaje" name="mensaje" required></textarea>
+		<label for="mensaje">Mensaje:</label>
+		<textarea id="mensaje" name="mensaje"></textarea><br>
 
-	  <button type="submit" onclick="enviarCorreo()">Enviar</button>
+		<button type="button" onclick="enviarWhatsapp()">Enviar por WhatsApp</button>
+		<button type="button" onclick="enviarCorreo()">Enviar por correo electrónico</button>
 	</form>
 
+	<script src="enviar.js"></script>
 </body>
 </html>
