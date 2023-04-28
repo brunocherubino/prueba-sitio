@@ -18,6 +18,18 @@ function enviarCorreo() {
   var telefono = document.getElementById("telefono").value;
   var mensaje = document.getElementById("mensaje").value;
 
+  // Crear un objeto XMLHttpRequest para enviar el correo electrónico
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "enviar.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // Configurar la función a ejecutar cuando se reciba la respuesta del servidor
+  xhr.onreadystatechange = function() {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      alert("¡Mensaje enviado!");
+    }
+  };
+
   // Configurar el mensaje del correo electrónico
   var asunto = "Nuevo mensaje de " + nombre;
   var cuerpo = "Nombre: " + nombre + "\n" +
@@ -25,14 +37,6 @@ function enviarCorreo() {
                "Número de teléfono: " + telefono + "\n\n" +
                "Mensaje:\n" + mensaje;
 
-  // Crear un objeto XMLHttpRequest para enviar el correo electrónico
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "sendmail.php", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
   // Enviar el mensaje del correo electrónico
   xhr.send("to=destinatario@ejemplo.com&subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo));
-
-  // Mostrar un mensaje de confirmación
-  alert("¡Mensaje enviado!");
 }
