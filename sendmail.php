@@ -1,18 +1,19 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Configurar la dirección de correo electrónico del destinatario
-  $destinatario = "destinatario@ejemplo.com";
 
-  // Obtener los valores del formulario
-  $asunto = $_POST["subject"];
-  $cuerpo = $_POST["body"];
-  $headers = "From: " . $_POST["from"];
+if (isset($_POST['submit'])) {
+  $to = "tu-correo@ejemplo.com";
+  $subject = "Nuevo mensaje de " . $_POST['nombre'];
+  $message = "Nombre: " . $_POST['nombre'] . "\n" .
+             "Correo electrónico: " . $_POST['correo'] . "\n" .
+             "Número de teléfono: " . $_POST['telefono'] . "\n\n" .
+             "Mensaje:\n" . $_POST['mensaje'];
+  $headers = "From: " . $_POST['correo'];
 
-  // Enviar el correo electrónico
-  if (mail($destinatario, $asunto, $cuerpo, $headers)) {
-    echo "Correo electrónico enviado";
+  if (mail($to, $subject, $message, $headers)) {
+    echo "¡El mensaje ha sido enviado con éxito!";
   } else {
-    echo "Hubo un problema al enviar el correo electrónico";
+    echo "Error al enviar el mensaje. Por favor, intenta nuevamente.";
   }
 }
+
 ?>
