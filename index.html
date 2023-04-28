@@ -9,20 +9,20 @@
 <body>
 	<h1>Formulario de contacto</h1>
 	<form>
-		<label for="nombre">Nombre:</label><br>
-		<input type="text" id="nombre" name="nombre" required><br>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
 
-		<label for="correo">Correo electrónico:</label><br>
-		<input type="email" id="correo" name="correo" required><br>
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo" name="correo" required>
 
-		<label for="telefono">Teléfono:</label><br>
-		<input type="tel" id="telefono" name="telefono" required><br>
+  <label for="telefono">Teléfono:</label>
+  <input type="tel" id="telefono" name="telefono">
 
-		<label for="mensaje">Mensaje:</label><br>
-		<textarea id="mensaje" name="mensaje" required></textarea><br>
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" required></textarea>
 
-		<input type="button" value="Enviar por WhatsApp" onclick="enviarWhatsapp()">
-		<input type="button" value="Enviar por correo electrónico" onclick="enviarCorreo()">
-	</form>
+  <button type="submit" onclick="enviarCorreo()">Enviar</button>
+</form>
+
 </body>
 </html>
