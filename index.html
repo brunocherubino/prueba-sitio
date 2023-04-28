@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario de contacto</title>
+	<title>Formulario de contacto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="enviar.js"></script>
 </head>
 <body>
-    <h1>Formulario de contacto</h1>
-    <form method="get" action="sendmail.php">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+	<h1>Formulario de contacto</h1>
+	<form>
+		<label for="nombre">Nombre:</label><br>
+		<input type="text" id="nombre" name="nombre" required><br>
 
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
+		<label for="correo">Correo electrónico:</label><br>
+		<input type="email" id="correo" name="correo" required><br>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
+		<label for="telefono">Teléfono:</label><br>
+		<input type="tel" id="telefono" name="telefono" required><br>
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
+		<label for="mensaje">Mensaje:</label><br>
+		<textarea id="mensaje" name="mensaje" required></textarea><br>
 
-        <input type="submit" value="Enviar">
-    </form>
+		<input type="button" value="Enviar por WhatsApp" onclick="enviarWhatsapp()">
+		<input type="button" value="Enviar por correo electrónico" onclick="enviarCorreo()">
+	</form>
 </body>
 </html>
